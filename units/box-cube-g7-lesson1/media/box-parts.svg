@@ -22,5 +22,4 @@
   <line x1="360" y1="130" x2="395" y2="130" stroke="#111" stroke-width="1.5"/>
   <line x1="355" y1="130" x2="365" y2="130" stroke="#dc2626" stroke-width="6"/>
   <text x="400" y="137" text-anchor="start" font-weight="bold" fill="#111">מקצוע</text>
-  <text x="230" y="290" direction="rtl" unicode-bidi="embed" text-anchor="middle" font-size="15" fill="#333">קו מקווקו: מקצוע שמוסתר מאחור</text>
 </svg>

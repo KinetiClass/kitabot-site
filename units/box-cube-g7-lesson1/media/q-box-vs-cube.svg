@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 290" font-family="Arial, sans-serif" font-size="22">
+<rect width="520" height="290" fill="#ffffff"/>
+<polygon points="30.0,230.0 210.0,230.0 210.0,143.6 30.0,143.6" fill="#dbeafe"/>
+<polygon points="30.0,143.6 210.0,143.6 247.8,116.6 67.8,116.6" fill="#eff6ff"/>
+<polygon points="210.0,230.0 247.8,203.0 247.8,116.6 210.0,143.6" fill="#bfdbfe"/>
+<line x1="30.0" y1="230.0" x2="210.0" y2="230.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="30.0" y1="143.6" x2="210.0" y2="143.6" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="67.8" y1="203.0" x2="247.8" y2="203.0" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="67.8" y1="116.6" x2="247.8" y2="116.6" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="30.0" y1="230.0" x2="30.0" y2="143.6" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="210.0" y1="230.0" x2="210.0" y2="143.6" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="67.8" y1="203.0" x2="67.8" y2="116.6" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="247.8" y1="203.0" x2="247.8" y2="116.6" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="30.0" y1="230.0" x2="67.8" y2="203.0" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="210.0" y1="230.0" x2="247.8" y2="203.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="30.0" y1="143.6" x2="67.8" y2="116.6" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="210.0" y1="143.6" x2="247.8" y2="116.6" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<polygon points="320.0,230.0 435.2,230.0 435.2,114.8 320.0,114.8" fill="#fde68a"/>
+<polygon points="320.0,114.8 435.2,114.8 483.6,80.2 368.4,80.2" fill="#fef3c7"/>
+<polygon points="435.2,230.0 483.6,195.4 483.6,80.2 435.2,114.8" fill="#fcd34d"/>
+<line x1="320.0" y1="230.0" x2="435.2" y2="230.0" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+<line x1="320.0" y1="114.8" x2="435.2" y2="114.8" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+<line x1="368.4" y1="195.4" x2="483.6" y2="195.4" stroke="#78350f" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="368.4" y1="80.2" x2="483.6" y2="80.2" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+<line x1="320.0" y1="230.0" x2="320.0" y2="114.8" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+<line x1="435.2" y1="230.0" x2="435.2" y2="114.8" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+<line x1="368.4" y1="195.4" x2="368.4" y2="80.2" stroke="#78350f" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="483.6" y1="195.4" x2="483.6" y2="80.2" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+<line x1="320.0" y1="230.0" x2="368.4" y2="195.4" stroke="#78350f" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="435.2" y1="230.0" x2="483.6" y2="195.4" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+<line x1="320.0" y1="114.8" x2="368.4" y2="80.2" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+<line x1="435.2" y1="114.8" x2="483.6" y2="80.2" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+<text x="120" y="272" text-anchor="middle" font-size="22" font-weight="bold" fill="#111">תיבה</text><text x="377" y="272" text-anchor="middle" font-size="22" font-weight="bold" fill="#111">קובייה</text>
+</svg>
