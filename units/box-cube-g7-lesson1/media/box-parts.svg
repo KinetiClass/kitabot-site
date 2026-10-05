@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" font-family="Arial, sans-serif" font-size="20">
+  <rect width="460" height="300" fill="#ffffff"/>
+  <polygon points="90,120 290,120 290,240 90,240" fill="#dbeafe"/>
+  <polygon points="90,120 160,70 360,70 290,120" fill="#eff6ff"/>
+  <polygon points="290,120 360,70 360,190 290,240" fill="#bfdbfe"/>
+  <g stroke="#1e3a8a" stroke-width="3" fill="none">
+    <polygon points="90,120 290,120 290,240 90,240"/>
+    <line x1="90" y1="120" x2="160" y2="70"/>
+    <line x1="290" y1="120" x2="360" y2="70"/>
+    <line x1="160" y1="70" x2="360" y2="70"/>
+    <line x1="360" y1="70" x2="360" y2="190"/>
+    <line x1="290" y1="240" x2="360" y2="190"/>
+  </g>
+  <g stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" fill="none">
+    <line x1="160" y1="70" x2="160" y2="190"/>
+    <line x1="160" y1="190" x2="360" y2="190"/>
+    <line x1="160" y1="190" x2="90" y2="240"/>
+  </g>
+  <text x="245" y="225" text-anchor="middle" font-weight="bold" fill="#111">פאה</text>
+  <circle cx="90" cy="240" r="7" fill="#dc2626"/>
+  <text x="80" y="275" text-anchor="middle" font-weight="bold" fill="#111">קודקוד</text>
+  <line x1="360" y1="130" x2="395" y2="130" stroke="#111" stroke-width="1.5"/>
+  <line x1="355" y1="130" x2="365" y2="130" stroke="#dc2626" stroke-width="6"/>
+  <text x="400" y="137" text-anchor="start" font-weight="bold" fill="#111">מקצוע</text>
+  <text x="230" y="290" direction="rtl" unicode-bidi="embed" text-anchor="middle" font-size="15" fill="#333">קו מקווקו: מקצוע שמוסתר מאחור</text>
+</svg>
