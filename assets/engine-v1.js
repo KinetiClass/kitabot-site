@@ -413,10 +413,65 @@
       }
     });
     main.appendChild(el("div", { class: "row" }, [copyBtn]));
+    try { renderSend(); } catch (e) {  }
 
     navInner.appendChild(el("button", { class: "btn ghost", type: "button", text: "הקודם", onclick: function () { go(S_EXIT); } }));
     navInner.appendChild(el("span", { class: "gate-note" }));
     if (hasEnrich) navInner.appendChild(el("button", { class: "btn", type: "button", text: state.enrichDone ? "חזרה להעשרה" : "נשאר לי זמן ⭐", onclick: function () { go(S_ENRICH); } }));
+  }
+
+  function classCode() {
+    var m = /[?&]k=([A-Z2-7]{10})(?:&|$)/.exec(location.search);
+    return m ? m[1] : null;
+  }
+  function apiBase() {
+    var m = document.querySelector('meta[name="kc-api"]');
+    var v = m && m.getAttribute("content");
+    return v && /^https:\/\//.test(v) ? v.replace(/\/+$/, "") : null;
+  }
+  function sendPayload(nickname) {
+    var results = [];
+    function collect(items, prefix) {
+      items.forEach(function (it, idx) {
+        if (!CHECKS[it.type]) return;
+        var k = prefix + "-" + idx, a = ans(k);
+        results.push({ k: k, t: it.type, c: !!a.correct, f: !!a.firstTry, v: a.value == null ? "" : String(a.value).slice(0, 1000) });
+      });
+    }
+    UNIT.sections.forEach(function (s, i) { collect(s.items, "s" + i); });
+    if (hasEnrich) collect(UNIT.enrichment.items, "e");
+    var exit = ((UNIT.exit && UNIT.exit.prompts) || []).map(function (p, i) { return { p: p, a: String(state.exit[i] || "").slice(0, 1000) }; });
+    return { code: classCode(), unit: UNIT.id, nickname: nickname, results: results, exit: exit };
+  }
+  function renderSend() {
+    var code = classCode(), api = apiBase();
+    if (!code || !api || !window.fetch) return;
+    var card = el("div", { class: "card" });
+    card.appendChild(el("h3", { text: "שליחה למורה" }));
+    card.appendChild(el("p", { class: "meta", text: G("מה נשלח: הכינוי שתכתבו, התשובות והציון ביחידה הזו – רק למורה של הכיתה. השם שכתבתם בהתחלה לא נשלח.",
+      "מה נשלח: הכינוי שתכתבי, התשובות והציון ביחידה הזו – רק למורה של הכיתה. השם שכתבת בהתחלה לא נשלח.",
+      "מה נשלח: הכינוי שתכתוב, התשובות והציון ביחידה הזו – רק למורה של הכיתה. השם שכתבת בהתחלה לא נשלח.") }));
+    var label = el("label", { for: "nick", text: "כינוי (לא שם מלא!)" });
+    var input = el("input", { type: "text", id: "nick", maxlength: "30", autocomplete: "off", value: state.nick || "" });
+    var btn = el("button", { class: "btn", type: "button", text: state.sentAt ? "שליחה שוב" : "שליחה" });
+    var msg = el("p", { class: "meta", text: state.sentAt ? "נשלח ✔ " + fmtTime(state.sentAt) : "" });
+    function upd() { btn.disabled = input.value.trim().length < 2; }
+    input.addEventListener("input", function () { state.nick = input.value; save(); upd(); });
+    btn.addEventListener("click", function () {
+      btn.disabled = true; msg.textContent = "שולח…";
+      fetch(api + "/api/exit", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(sendPayload(input.value.trim())) })
+        .then(function (r) {
+          if (r.status === 201) { state.sentAt = Date.now(); save(); msg.textContent = "נשלח ✔ " + fmtTime(state.sentAt); btn.textContent = "שליחה שוב"; }
+          else if (r.status === 403) msg.textContent = "הכיתה הזו עדיין לא פתוחה לשליחה. אפשר להעתיק את הסיכום ולשלוח למורה בדרך אחרת.";
+          else if (r.status === 429 || r.status === 503) msg.textContent = "יש עכשיו עומס. נסו שוב בעוד כמה דקות, או העתיקו את הסיכום ושלחו למורה.";
+          else msg.textContent = "השליחה לא הצליחה. אפשר לנסות שוב, או להעתיק את הסיכום ולשלוח למורה.";
+        }, function () { msg.textContent = "אין חיבור. אפשר לנסות שוב, או להעתיק את הסיכום ולשלוח למורה."; })
+        .then(upd);
+    });
+    card.appendChild(label); card.appendChild(input);
+    card.appendChild(el("div", { class: "row" }, [btn])); card.appendChild(msg);
+    main.appendChild(card);
+    upd();
   }
 
   function renderEnrichment() {
