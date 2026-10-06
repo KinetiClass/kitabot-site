@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 350" font-family="Arial, sans-serif" font-size="22">
+<rect width="420" height="350" fill="#ffffff"/>
+<polygon points="70.0,250.0 270.0,250.0 270.0,130.0 70.0,130.0" fill="#dbeafe"/>
+<polygon points="70.0,130.0 270.0,130.0 320.4,94.0 120.4,94.0" fill="#eff6ff"/>
+<polygon points="270.0,250.0 320.4,214.0 320.4,94.0 270.0,130.0" fill="#bfdbfe"/>
+<line x1="70.0" y1="250.0" x2="270.0" y2="250.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="70.0" y1="130.0" x2="270.0" y2="130.0" stroke="#dc2626" stroke-width="6" stroke-linecap="round"/>
+<line x1="120.4" y1="214.0" x2="320.4" y2="214.0" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="120.4" y1="94.0" x2="320.4" y2="94.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="70.0" y1="250.0" x2="70.0" y2="130.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="270.0" y1="250.0" x2="270.0" y2="130.0" stroke="#dc2626" stroke-width="6" stroke-linecap="round"/>
+<line x1="120.4" y1="214.0" x2="120.4" y2="94.0" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="320.4" y1="214.0" x2="320.4" y2="94.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="70.0" y1="250.0" x2="120.4" y2="214.0" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="270.0" y1="250.0" x2="320.4" y2="214.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="70.0" y1="130.0" x2="120.4" y2="94.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="270.0" y1="130.0" x2="320.4" y2="94.0" stroke="#dc2626" stroke-width="6" stroke-linecap="round"/>
+<circle cx="270.0" cy="130.0" r="10" fill="#7c3aed" stroke="#fff" stroke-width="2"/>
+<text x="306.5" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">האיור</text>
+<text x="227.6" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">לשאלה</text>
+<text x="128.8" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">1</text>
+</svg>

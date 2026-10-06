@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 350" font-family="Arial, sans-serif" font-size="22">
+<rect width="420" height="350" fill="#ffffff"/>
+<polygon points="80.0,260.0 130.0,260.0 130.0,210.0 80.0,210.0" fill="#fdba74" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="80.0,110.0 130.0,110.0 151.0,95.0 101.0,95.0" fill="#fed7aa" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="230.0,260.0 251.0,245.0 251.0,195.0 230.0,210.0" fill="#fb923c" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="80.0,210.0 130.0,210.0 130.0,160.0 80.0,160.0" fill="#dc2626" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="101.0,95.0 151.0,95.0 172.0,80.0 122.0,80.0" fill="#dc2626" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="251.0,245.0 272.0,230.0 272.0,180.0 251.0,195.0" fill="#dc2626" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="80.0,160.0 130.0,160.0 130.0,110.0 80.0,110.0" fill="#fdba74" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="122.0,80.0 172.0,80.0 193.0,65.0 143.0,65.0" fill="#fed7aa" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="272.0,230.0 293.0,215.0 293.0,165.0 272.0,180.0" fill="#fb923c" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="130.0,260.0 180.0,260.0 180.0,210.0 130.0,210.0" fill="#dc2626" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="130.0,110.0 180.0,110.0 201.0,95.0 151.0,95.0" fill="#dc2626" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="230.0,210.0 251.0,195.0 251.0,145.0 230.0,160.0" fill="#dc2626" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="130.0,210.0 180.0,210.0 180.0,160.0 130.0,160.0" fill="#fdba74" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="151.0,95.0 201.0,95.0 222.0,80.0 172.0,80.0" fill="#fed7aa" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="251.0,195.0 272.0,180.0 272.0,130.0 251.0,145.0" fill="#fb923c" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="130.0,160.0 180.0,160.0 180.0,110.0 130.0,110.0" fill="#dc2626" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="172.0,80.0 222.0,80.0 243.0,65.0 193.0,65.0" fill="#dc2626" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="272.0,180.0 293.0,165.0 293.0,115.0 272.0,130.0" fill="#dc2626" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="180.0,260.0 230.0,260.0 230.0,210.0 180.0,210.0" fill="#fdba74" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="180.0,110.0 230.0,110.0 251.0,95.0 201.0,95.0" fill="#fed7aa" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="230.0,160.0 251.0,145.0 251.0,95.0 230.0,110.0" fill="#fb923c" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="180.0,210.0 230.0,210.0 230.0,160.0 180.0,160.0" fill="#dc2626" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="201.0,95.0 251.0,95.0 272.0,80.0 222.0,80.0" fill="#dc2626" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="251.0,145.0 272.0,130.0 272.0,80.0 251.0,95.0" fill="#dc2626" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="180.0,160.0 230.0,160.0 230.0,110.0 180.0,110.0" fill="#fdba74" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="222.0,80.0 272.0,80.0 293.0,65.0 243.0,65.0" fill="#fed7aa" stroke="#7c2d12" stroke-width="2"/>
+<polygon points="272.0,130.0 293.0,115.0 293.0,65.0 272.0,80.0" fill="#fb923c" stroke="#7c2d12" stroke-width="2"/>
+<text x="388.0" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">הקוביות</text>
+<text x="280.0" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">שבאמצע</text>
+<text x="158.6" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">המקצועות</text>
+</svg>

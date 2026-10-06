@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" font-family="Arial, sans-serif" font-size="24">
+  <rect width="400" height="350" fill="#ffffff"/>
+  <polygon points="100,110 240,110 240,250 100,250" fill="#fde68a"/>
+  <polygon points="100,110 160,60 300,60 240,110" fill="#fef3c7"/>
+  <polygon points="240,110 300,60 300,200 240,250" fill="#fcd34d"/>
+  <g stroke="#78350f" stroke-width="3" fill="none">
+    <polygon points="100,110 240,110 240,250 100,250"/>
+    <line x1="100" y1="110" x2="160" y2="60"/>
+    <line x1="240" y1="110" x2="300" y2="60"/>
+    <line x1="160" y1="60" x2="300" y2="60"/>
+    <line x1="300" y1="60" x2="300" y2="200"/>
+    <line x1="240" y1="250" x2="300" y2="200"/>
+  </g>
+  <g stroke="#78350f" stroke-width="2" stroke-dasharray="8 6" fill="none">
+    <line x1="160" y1="60" x2="160" y2="200"/>
+    <line x1="160" y1="200" x2="300" y2="200"/>
+    <line x1="160" y1="200" x2="100" y2="250"/>
+  </g>
+  <text x="170" y="282" text-anchor="middle" font-weight="bold" font-style="italic" fill="#111">a</text>
+  <text x="85" y="188" text-anchor="end" font-weight="bold" font-style="italic" fill="#111">a</text>
+  <text x="285" y="245" text-anchor="start" font-weight="bold" font-style="italic" fill="#111">a</text>
+<text x="373.1" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">בקובייה</text>
+<text x="268.4" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">כל</text>
+<text x="228.9" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">המקצועות</text>
+<text x="93.3" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">שווים</text>
+</svg>

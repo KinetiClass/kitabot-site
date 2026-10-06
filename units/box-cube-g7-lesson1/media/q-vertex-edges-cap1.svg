@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 388" font-family="Arial, sans-serif" font-size="22">
+<rect width="440" height="388" fill="#ffffff"/>
+<polygon points="90.0,240.0 290.0,240.0 290.0,120.0 90.0,120.0" fill="#dbeafe"/>
+<polygon points="90.0,120.0 290.0,120.0 340.4,84.0 140.4,84.0" fill="#eff6ff"/>
+<polygon points="290.0,240.0 340.4,204.0 340.4,84.0 290.0,120.0" fill="#bfdbfe"/>
+<line x1="90.0" y1="240.0" x2="290.0" y2="240.0" stroke="#dc2626" stroke-width="6" stroke-linecap="round"/>
+<line x1="90.0" y1="120.0" x2="290.0" y2="120.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="140.4" y1="204.0" x2="340.4" y2="204.0" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="140.4" y1="84.0" x2="340.4" y2="84.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="90.0" y1="240.0" x2="90.0" y2="120.0" stroke="#dc2626" stroke-width="6" stroke-linecap="round"/>
+<line x1="290.0" y1="240.0" x2="290.0" y2="120.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="140.4" y1="204.0" x2="140.4" y2="84.0" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="340.4" y1="204.0" x2="340.4" y2="84.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="90.0" y1="240.0" x2="140.4" y2="204.0" stroke="#dc2626" stroke-width="6" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="290.0" y1="240.0" x2="340.4" y2="204.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="90.0" y1="120.0" x2="140.4" y2="84.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="290.0" y1="120.0" x2="340.4" y2="84.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<circle cx="90.0" cy="240.0" r="10" fill="#7c3aed" stroke="#fff" stroke-width="2"/>
+<text x="387.5" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">האיור</text>
+<text x="308.6" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">לשאלה</text>
+<text x="209.8" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">4</text>
+<text x="185.5" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">–</text>
+<text x="161.2" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">ספרו</text>
+<text x="91.0" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">את</text>
+<text x="319.6" y="370" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">הקווים</text>
+<text x="229.8" y="370" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">האדומים</text>
+</svg>

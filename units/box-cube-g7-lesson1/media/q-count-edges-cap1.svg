@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 350" font-family="Arial, sans-serif" font-size="22">
+<rect width="520" height="350" fill="#ffffff"/>
+<polygon points="40.0,240.0 240.0,240.0 240.0,120.0 40.0,120.0" fill="#f8fafc"/>
+<polygon points="40.0,120.0 240.0,120.0 290.4,84.0 90.4,84.0" fill="#f8fafc"/>
+<polygon points="240.0,240.0 290.4,204.0 290.4,84.0 240.0,120.0" fill="#f1f5f9"/>
+<line x1="40.0" y1="240.0" x2="240.0" y2="240.0" stroke="#dc2626" stroke-width="6" stroke-linecap="round"/>
+<line x1="40.0" y1="120.0" x2="240.0" y2="120.0" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+<line x1="90.4" y1="204.0" x2="290.4" y2="204.0" stroke="#dc2626" stroke-width="6" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="90.4" y1="84.0" x2="290.4" y2="84.0" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+<line x1="40.0" y1="240.0" x2="40.0" y2="120.0" stroke="#16a34a" stroke-width="6" stroke-linecap="round"/>
+<line x1="240.0" y1="240.0" x2="240.0" y2="120.0" stroke="#16a34a" stroke-width="6" stroke-linecap="round"/>
+<line x1="90.4" y1="204.0" x2="90.4" y2="84.0" stroke="#16a34a" stroke-width="6" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="290.4" y1="204.0" x2="290.4" y2="84.0" stroke="#16a34a" stroke-width="6" stroke-linecap="round"/>
+<line x1="40.0" y1="240.0" x2="90.4" y2="204.0" stroke="#dc2626" stroke-width="6" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="240.0" y1="240.0" x2="290.4" y2="204.0" stroke="#dc2626" stroke-width="6" stroke-linecap="round"/>
+<line x1="40.0" y1="120.0" x2="90.4" y2="84.0" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+<line x1="240.0" y1="120.0" x2="290.4" y2="84.0" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+<line x1="380" y1="80" x2="420" y2="80" stroke="#2563eb" stroke-width="6"/><text x="430" y="88" text-anchor="start" font-size="20" font-weight="bold" fill="#111">למעלה</text><line x1="380" y1="130" x2="420" y2="130" stroke="#16a34a" stroke-width="6"/><text x="430" y="138" text-anchor="start" font-size="20" font-weight="bold" fill="#111">עומדים</text><line x1="380" y1="180" x2="420" y2="180" stroke="#dc2626" stroke-width="6"/><text x="430" y="188" text-anchor="start" font-size="20" font-weight="bold" fill="#111">למטה</text>
+<text x="487.4" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">האיור</text>
+<text x="408.4" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">לשאלה</text>
+<text x="309.7" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">3</text>
+<text x="285.3" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">–</text>
+<text x="261.0" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">ספרו</text>
+<text x="190.9" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">כל</text>
+<text x="151.4" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">צבע</text>
+<text x="91.5" y="332" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">לחוד</text>
+</svg>

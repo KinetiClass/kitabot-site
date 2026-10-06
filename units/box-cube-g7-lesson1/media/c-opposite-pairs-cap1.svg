@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530 288" font-family="Arial, sans-serif" font-size="22">
+<rect width="530" height="288" fill="#ffffff"/>
+<polygon points="14.0,170.0 134.0,170.0 167.6,146.0 47.6,146.0" fill="#fca5a5" fill-opacity="0.75"/>
+<polygon points="14.0,90.0 134.0,90.0 167.6,66.0 47.6,66.0" fill="#fca5a5" fill-opacity="0.75"/>
+<polygon points="14.0,170.0 134.0,170.0 134.0,90.0 14.0,90.0" fill="none"/>
+<polygon points="14.0,90.0 134.0,90.0 167.6,66.0 47.6,66.0" fill="none"/>
+<polygon points="134.0,170.0 167.6,146.0 167.6,66.0 134.0,90.0" fill="none"/>
+<line x1="14.0" y1="170.0" x2="134.0" y2="170.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="14.0" y1="90.0" x2="134.0" y2="90.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="47.6" y1="146.0" x2="167.6" y2="146.0" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="47.6" y1="66.0" x2="167.6" y2="66.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="14.0" y1="170.0" x2="14.0" y2="90.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="134.0" y1="170.0" x2="134.0" y2="90.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="47.6" y1="146.0" x2="47.6" y2="66.0" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="167.6" y1="146.0" x2="167.6" y2="66.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="14.0" y1="170.0" x2="47.6" y2="146.0" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="134.0" y1="170.0" x2="167.6" y2="146.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="14.0" y1="90.0" x2="47.6" y2="66.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="134.0" y1="90.0" x2="167.6" y2="66.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/><polygon points="219.6,146.0 339.6,146.0 339.6,66.0 219.6,66.0" fill="#86efac" fill-opacity="0.75"/>
+<polygon points="186.0,170.0 306.0,170.0 306.0,90.0 186.0,90.0" fill="#86efac" fill-opacity="0.75"/>
+<polygon points="186.0,170.0 306.0,170.0 306.0,90.0 186.0,90.0" fill="none"/>
+<polygon points="186.0,90.0 306.0,90.0 339.6,66.0 219.6,66.0" fill="none"/>
+<polygon points="306.0,170.0 339.6,146.0 339.6,66.0 306.0,90.0" fill="none"/>
+<line x1="186.0" y1="170.0" x2="306.0" y2="170.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="186.0" y1="90.0" x2="306.0" y2="90.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="219.6" y1="146.0" x2="339.6" y2="146.0" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="219.6" y1="66.0" x2="339.6" y2="66.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="186.0" y1="170.0" x2="186.0" y2="90.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="306.0" y1="170.0" x2="306.0" y2="90.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="219.6" y1="146.0" x2="219.6" y2="66.0" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="339.6" y1="146.0" x2="339.6" y2="66.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="186.0" y1="170.0" x2="219.6" y2="146.0" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="306.0" y1="170.0" x2="339.6" y2="146.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="186.0" y1="90.0" x2="219.6" y2="66.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="306.0" y1="90.0" x2="339.6" y2="66.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/><polygon points="358.0,170.0 391.6,146.0 391.6,66.0 358.0,90.0" fill="#93c5fd" fill-opacity="0.75"/>
+<polygon points="478.0,170.0 511.6,146.0 511.6,66.0 478.0,90.0" fill="#93c5fd" fill-opacity="0.75"/>
+<polygon points="358.0,170.0 478.0,170.0 478.0,90.0 358.0,90.0" fill="none"/>
+<polygon points="358.0,90.0 478.0,90.0 511.6,66.0 391.6,66.0" fill="none"/>
+<polygon points="478.0,170.0 511.6,146.0 511.6,66.0 478.0,90.0" fill="none"/>
+<line x1="358.0" y1="170.0" x2="478.0" y2="170.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="358.0" y1="90.0" x2="478.0" y2="90.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="391.6" y1="146.0" x2="511.6" y2="146.0" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="391.6" y1="66.0" x2="511.6" y2="66.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="358.0" y1="170.0" x2="358.0" y2="90.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="478.0" y1="170.0" x2="478.0" y2="90.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="391.6" y1="146.0" x2="391.6" y2="66.0" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="511.6" y1="146.0" x2="511.6" y2="66.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="358.0" y1="170.0" x2="391.6" y2="146.0" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round"/>
+<line x1="478.0" y1="170.0" x2="511.6" y2="146.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="358.0" y1="90.0" x2="391.6" y2="66.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<line x1="478.0" y1="90.0" x2="511.6" y2="66.0" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+<text x="487.4" y="232" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">האיור</text>
+<text x="408.5" y="232" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">לשאלה</text>
+<text x="309.7" y="232" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">1</text>
+<text x="285.4" y="232" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">ולשאלה</text>
+<text x="178.3" y="232" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">2</text>
+<text x="154.0" y="232" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">–</text>
+<text x="129.7" y="232" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">שלושה</text>
+<text x="398.5" y="270" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">זוגות</text>
+<text x="329.8" y="270" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">של</text>
+<text x="282.9" y="270" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">פאות</text>
+<text x="209.0" y="270" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">נגדיות</text>
+</svg>

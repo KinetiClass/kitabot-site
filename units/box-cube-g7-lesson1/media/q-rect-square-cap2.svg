@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 290" font-family="Arial, sans-serif" font-size="22">
+<rect width="460" height="290" fill="#ffffff"/>
+<rect x="30" y="60" width="200" height="110" fill="#dbeafe" stroke="#1e3a8a" stroke-width="3"/><rect x="290" y="45" width="140" height="140" fill="#fef3c7" stroke="#78350f" stroke-width="3"/><path d="M30 150 h20 v20" fill="none" stroke="#111" stroke-width="2"/><path d="M290 165 h20 v20" fill="none" stroke="#111" stroke-width="2"/><text x="130" y="215" text-anchor="middle" font-size="22" font-weight="bold" fill="#111">מלבן</text><text x="360" y="215" text-anchor="middle" font-size="22" font-weight="bold" fill="#111">ריבוע</text>
+<text x="326.5" y="272" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">האיור</text>
+<text x="247.6" y="272" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">לשאלה</text>
+<text x="148.8" y="272" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">3</text>
+</svg>

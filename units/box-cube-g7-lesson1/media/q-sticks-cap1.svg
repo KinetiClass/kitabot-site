@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 330" font-family="Arial, sans-serif" font-size="22">
+<rect width="480" height="330" fill="#ffffff"/>
+<line x1="60.0" y1="220.0" x2="320.0" y2="220.0" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+<line x1="60.0" y1="64.0" x2="320.0" y2="64.0" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+<line x1="92.8" y1="196.6" x2="352.8" y2="196.6" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+<line x1="92.8" y1="40.6" x2="352.8" y2="40.6" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+<line x1="60.0" y1="220.0" x2="60.0" y2="64.0" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+<line x1="320.0" y1="220.0" x2="320.0" y2="64.0" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+<line x1="92.8" y1="196.6" x2="92.8" y2="40.6" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+<line x1="352.8" y1="196.6" x2="352.8" y2="40.6" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+<line x1="60.0" y1="220.0" x2="92.8" y2="196.6" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+<line x1="320.0" y1="220.0" x2="352.8" y2="196.6" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+<line x1="60.0" y1="64.0" x2="92.8" y2="40.6" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+<line x1="320.0" y1="64.0" x2="352.8" y2="40.6" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+<text x="185.7" y="251.6" text-anchor="middle" font-weight="bold" font-size="24" fill="#111">10</text>
+<text x="36.1" y="151.9" text-anchor="middle" font-weight="bold" font-size="24" fill="#111">6</text>
+<text x="357.0" y="228.6" text-anchor="middle" font-weight="bold" font-size="24" fill="#111">3</text>
+<text x="440.3" y="312" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">האיור</text>
+<text x="361.3" y="312" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">לשאלה</text>
+<text x="262.6" y="312" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">4</text>
+<text x="238.2" y="312" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">–</text>
+<text x="213.9" y="312" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">המידות</text>
+<text x="113.8" y="312" text-anchor="end" font-size="26" font-weight="bold" fill="#1f2430">בס״מ</text>
+</svg>
