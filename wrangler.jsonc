@@ -1,0 +1,12 @@
+// Cloudflare Workers Builds config for the public student site (static files only, no Worker code).
+// Deployed automatically by Cloudflare on every push to main; GitHub Pages serves the same files as a mirror.
+// The Worker name must stay "kitabot-site": every student link depends on it.
+{
+  "name": "kitabot-site",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": ".",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  }
+}
