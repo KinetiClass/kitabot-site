@@ -153,6 +153,7 @@
   }
 
   var KIND = { text: "הסבר", tip: "טיפ", image: "איור", video: "סרטון", link: "קישור" };
+  var KIND_ID = { text: "x", tip: "p", image: "i", video: "v", link: "l" };
   function renderItems(items, prefix, container, onChange, base) {
     var qn = 0, n = {};
     items.forEach(function (it, idx) {
@@ -161,7 +162,7 @@
       else node = renderBlock(it);
       if (base && node) {
         var isQ = !!CHECKS[it.type], c = isQ ? qn : (n[it.type] = (n[it.type] || 0) + 1);
-        node.setAttribute("data-el", base.id + "." + (isQ ? "q" : it.type.charAt(0)) + c);
+        node.setAttribute("data-el", base.id + "." + (isQ ? "q" : KIND_ID[it.type] || "b") + c);
         node.insertBefore(el("div", { class: "t-label", text: base.he + " · " + (isQ ? "שאלה" : KIND[it.type] || "פריט") + " " + c }), node.firstChild);
       }
       container.appendChild(node);
