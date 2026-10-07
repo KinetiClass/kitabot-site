@@ -16,7 +16,8 @@
   var CHECKS = { mcq: 1, tf: 1, fill: 1, open: 1 };
   var MAX_TRIES = 2;
   var RATES = ["😀 הבנתי היטב", "🙂 הבנתי חלקית", G("😕 אני צריך/ה עזרה", "😕 אני צריכה עזרה", "😕 אני צריך עזרה")];
-  var KEY = "lu:" + UNIT.id + ":v1";
+  var TEACHER = /[?&]view=teacher(?:&|$)/.test(location.search);
+  var KEY = "lu:" + UNIT.id + ":v1" + (TEACHER ? ":teacher" : "");
 
   var state = load() || fresh();
   function fresh() {
@@ -86,6 +87,7 @@
 
   function render() {
     main.innerHTML = ""; navInner.innerHTML = "";
+    if (TEACHER) return renderTeacher();
     var s = state.screen;
     var pct = s === 0 ? 0 : Math.min(100, Math.round((Math.min(s, S_EXIT) / S_EXIT) * 100));
     bar.style.width = pct + "%";
@@ -150,12 +152,19 @@
     if (input && startBtn.disabled) setTimeout(function () { input.focus(); }, 0);
   }
 
-  function renderItems(items, prefix, container, onChange) {
-    var qn = 0;
+  var KIND = { text: "הסבר", tip: "טיפ", image: "איור", video: "סרטון", link: "קישור" };
+  function renderItems(items, prefix, container, onChange, base) {
+    var qn = 0, n = {};
     items.forEach(function (it, idx) {
-      var k = prefix + "-" + idx;
-      if (CHECKS[it.type]) { qn++; container.appendChild(renderCheck(it, k, qn, onChange)); }
-      else container.appendChild(renderBlock(it));
+      var k = prefix + "-" + idx, node;
+      if (CHECKS[it.type]) { qn++; node = renderCheck(it, k, qn, onChange); }
+      else node = renderBlock(it);
+      if (base && node) {
+        var isQ = !!CHECKS[it.type], c = isQ ? qn : (n[it.type] = (n[it.type] || 0) + 1);
+        node.setAttribute("data-el", base.id + "." + (isQ ? "q" : it.type.charAt(0)) + c);
+        node.insertBefore(el("div", { class: "t-label", text: base.he + " · " + (isQ ? "שאלה" : KIND[it.type] || "פריט") + " " + c }), node.firstChild);
+      }
+      container.appendChild(node);
     });
   }
 
@@ -173,7 +182,8 @@
       case "video": {
         var v = el("div", { class: "video" }, [el("iframe", {
           src: "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(b.youtube) + (b.start ? "?start=" + (+b.start) : ""),
-          title: b.caption || "סרטון", allow: "encrypted-media; picture-in-picture", allowfullscreen: "", loading: "lazy"
+          title: b.caption || "סרטון", allow: "encrypted-media; picture-in-picture", allowfullscreen: "", loading: "lazy",
+          referrerpolicy: "strict-origin-when-cross-origin"
         })]);
         var c = el("div", { class: "card" }, [v]);
         if (b.caption) c.appendChild(el("p", { class: "meta", text: b.caption, style: "margin-top:8px" }));
@@ -472,6 +482,31 @@
     card.appendChild(el("div", { class: "row" }, [btn])); card.appendChild(msg);
     main.appendChild(card);
     upd();
+  }
+
+  function renderTeacher() {
+    bar.style.width = "100%";
+    progLabel.textContent = "תצוגה למורה";
+    main.appendChild(el("p", { class: "t-banner", text: "תצוגה למורה: כל היחידה בעמוד אחד. התוויות הצהובות מופיעות רק כאן, לא אצל התלמידים." }));
+    UNIT.sections.forEach(function (sec, i) {
+      var box = el("section", { "data-el": "s" + (i + 1) });
+      box.appendChild(el("div", { class: "t-label", text: "חלק " + (i + 1) }));
+      box.appendChild(el("h2", { text: sec.title }));
+      renderItems(sec.items, "s" + i, box, function () {}, { he: "חלק " + (i + 1), id: "s" + (i + 1) });
+      main.appendChild(box);
+    });
+    var ex = el("section", { "data-el": "exit" });
+    ex.appendChild(el("h2", { text: "כרטיס יציאה" }));
+    ((UNIT.exit && UNIT.exit.prompts) || []).forEach(function (p, j) {
+      ex.appendChild(el("div", { class: "card", "data-el": "exit.q" + (j + 1) }, [el("div", { class: "t-label", text: "כרטיס יציאה · שאלה " + (j + 1) }), el("div", { text: p })]));
+    });
+    main.appendChild(ex);
+    if (hasEnrich) {
+      var en = el("section", { "data-el": "e" });
+      en.appendChild(el("h2", { text: "⭐ " + (UNIT.enrichment.title || "משימת העשרה") }));
+      renderItems(UNIT.enrichment.items, "e", en, function () {}, { he: "העשרה", id: "e" });
+      main.appendChild(en);
+    }
   }
 
   function renderEnrichment() {
