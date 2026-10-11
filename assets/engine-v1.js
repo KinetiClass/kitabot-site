@@ -522,25 +522,36 @@
     var meta = document.querySelector('meta[name="kc-studio"]'), base = meta && /^https?:\/\//.test(meta.content) ? meta.content.replace(/\/$/, "") : null;
     var token = reviewToken();
     if (!base || !token || !window.fetch) return;
-    main.insertBefore(el("p", { class: "t-banner", text: "אפשר להעיר על כל חלק: כפתור \"הערה\" ליד כל תווית צהובה. ההערה מגיעה לשיחה." }), main.firstChild.nextSibling);
+    var bm = document.querySelector('meta[name="kc-unit-build"]'), build = bm ? bm.content : null, stale = null;
+    main.insertBefore(el("p", { class: "t-banner", text: "אפשר להעיר על כל חלק: כפתור \"הערה\" ליד כל תווית צהובה. ההערות נאספות בשיחה ונשלחות ל-AI משם." }), main.firstChild.nextSibling);
+    function staleNotice() {
+      if (stale) return;
+      stale = el("p", { class: "t-banner" }, ["יש גרסה חדשה יותר של היחידה, והמספור של החלקים אולי השתנה. ",
+        el("button", { type: "button", class: "btn", text: "לרענן את הדף" })]);
+      stale.querySelector("button").addEventListener("click", function () { location.reload(); });
+      main.insertBefore(stale, main.firstChild.nextSibling);
+    }
     [].forEach.call(main.querySelectorAll("[data-el]"), function (node) {
       var label = node.querySelector(".t-label");
       if (!label || label.parentNode !== node) return;
       var id = node.getAttribute("data-el"), box = el("div", { class: "t-comment", hidden: "hidden" });
       var ta = el("textarea", { rows: "2", "aria-label": "הערה על " + label.textContent, placeholder: "מה לשנות כאן?" });
       var msg = el("span", { class: "t-comment-msg" });
-      var send = el("button", { type: "button", class: "btn", text: "שליחה" });
+      var send = el("button", { type: "button", class: "btn", text: "לשמור הערה" });
       send.addEventListener("click", function () {
         var text = ta.value.trim();
         if (!text) return;
         send.disabled = true; msg.textContent = "";
-        fetch(base + "/api/r/feedback", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ r: token, element: id, label: label.textContent, text: text }) })
+        fetch(base + "/api/r/feedback", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ r: token, element: id, label: label.textContent, text: text, build: build }) })
           .then(function (r) {
             send.disabled = false;
-            if (r.status === 201) { ta.value = ""; msg.textContent = "נשלח ✔"; box.hidden = true; btn.textContent = "💬 הערה נשלחה – עוד הערה"; }
+            if (r.status === 201) {
+              ta.value = ""; msg.textContent = "נשמר ✔"; box.hidden = true; btn.textContent = "💬 ההערה נשמרה בשיחה – עוד הערה";
+              r.json().then(function (j) { if (j && j.stale) staleNotice(); }, function () {});
+            }
             else if (r.status === 401) msg.textContent = "הקישור הזה כבר לא פעיל. אפשר לכתוב את ההערה בשיחה.";
-            else msg.textContent = "ההערה לא נשלחה. אפשר לנסות שוב או לכתוב בשיחה.";
-          }, function () { send.disabled = false; msg.textContent = "ההערה לא נשלחה. אפשר לנסות שוב או לכתוב בשיחה."; });
+            else msg.textContent = "ההערה לא נשמרה. אפשר לנסות שוב או לכתוב בשיחה.";
+          }, function () { send.disabled = false; msg.textContent = "ההערה לא נשמרה. אפשר לנסות שוב או לכתוב בשיחה."; });
       });
       box.appendChild(ta); box.appendChild(el("div", { class: "t-comment-row" }, [send, msg]));
       var btn = el("button", { type: "button", class: "t-comment-btn", text: "💬 הערה", "aria-expanded": "false" });
