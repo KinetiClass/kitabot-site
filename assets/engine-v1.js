@@ -508,6 +508,46 @@
       renderItems(UNIT.enrichment.items, "e", en, function () {}, { he: "העשרה", id: "e" });
       main.appendChild(en);
     }
+    reviewHooks();
+  }
+
+  function reviewToken() {
+    var m = /^#r=([A-Za-z0-9_-]{20,200})$/.exec(location.hash), k = "kc-review:" + UNIT.id;
+    try {
+      if (m) { sessionStorage.setItem(k, m[1]); history.replaceState(null, "", location.pathname + location.search); return m[1]; }
+      return sessionStorage.getItem(k);
+    } catch (e) { return m ? m[1] : null; }
+  }
+  function reviewHooks() {
+    var meta = document.querySelector('meta[name="kc-studio"]'), base = meta && /^https?:\/\//.test(meta.content) ? meta.content.replace(/\/$/, "") : null;
+    var token = reviewToken();
+    if (!base || !token || !window.fetch) return;
+    main.insertBefore(el("p", { class: "t-banner", text: "אפשר להעיר על כל חלק: כפתור \"הערה\" ליד כל תווית צהובה. ההערה מגיעה לשיחה." }), main.firstChild.nextSibling);
+    [].forEach.call(main.querySelectorAll("[data-el]"), function (node) {
+      var label = node.querySelector(".t-label");
+      if (!label || label.parentNode !== node) return;
+      var id = node.getAttribute("data-el"), box = el("div", { class: "t-comment", hidden: "hidden" });
+      var ta = el("textarea", { rows: "2", "aria-label": "הערה על " + label.textContent, placeholder: "מה לשנות כאן?" });
+      var msg = el("span", { class: "t-comment-msg" });
+      var send = el("button", { type: "button", class: "btn", text: "שליחה" });
+      send.addEventListener("click", function () {
+        var text = ta.value.trim();
+        if (!text) return;
+        send.disabled = true; msg.textContent = "";
+        fetch(base + "/api/r/feedback", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ r: token, element: id, label: label.textContent, text: text }) })
+          .then(function (r) {
+            send.disabled = false;
+            if (r.status === 201) { ta.value = ""; msg.textContent = "נשלח ✔"; box.hidden = true; btn.textContent = "💬 הערה נשלחה – עוד הערה"; }
+            else if (r.status === 401) msg.textContent = "הקישור הזה כבר לא פעיל. אפשר לכתוב את ההערה בשיחה.";
+            else msg.textContent = "ההערה לא נשלחה. אפשר לנסות שוב או לכתוב בשיחה.";
+          }, function () { send.disabled = false; msg.textContent = "ההערה לא נשלחה. אפשר לנסות שוב או לכתוב בשיחה."; });
+      });
+      box.appendChild(ta); box.appendChild(el("div", { class: "t-comment-row" }, [send, msg]));
+      var btn = el("button", { type: "button", class: "t-comment-btn", text: "💬 הערה", "aria-expanded": "false" });
+      btn.addEventListener("click", function () { box.hidden = !box.hidden; btn.setAttribute("aria-expanded", box.hidden ? "false" : "true"); if (!box.hidden) ta.focus(); });
+      label.parentNode.insertBefore(btn, label.nextSibling);
+      label.parentNode.insertBefore(box, btn.nextSibling);
+    });
   }
 
   function renderEnrichment() {
