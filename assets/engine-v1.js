@@ -215,8 +215,8 @@
 
     function show(kind, text) {
       fb.className = "fb show " + kind; fb.innerHTML = "";
-      text.forEach(function (t, i) { if (t) fb.appendChild(el(i === 0 ? "strong" : "div", { text: t })); });
-      live.textContent = text.filter(Boolean).join(". ");
+      text.forEach(function (t, i) { if (t && t.nodeType) fb.appendChild(t); else if (t) fb.appendChild(el(i === 0 ? "strong" : "div", { text: t })); });
+      live.textContent = text.filter(function (t) { return t && !t.nodeType; }).join(". ");
     }
 
     if (q.type === "mcq" || q.type === "tf") {
@@ -287,19 +287,22 @@
     else if (q.type === "open") {
       var ta = el("textarea", { "aria-label": q.prompt, placeholder: G("כתבו כאן את התשובה שלכם", "כתבו כאן את התשובה שלכן"), dir: "auto" });
       ta.value = a.value || "";
-      var reveal = el("button", { class: "btn small", type: "button", text: q.model ? "שמירה והצגת תשובה לדוגמה" : "שמירה" });
+      var after = q.kind === "check" && q.model ? function () { return [G("בדקו אם כתבתם את אותו רעיון:", "בדקו אם כתבתן את אותו רעיון:"), q.model].concat(Array.isArray(q.checkFor) && q.checkFor.length ? [el("ul", {}, q.checkFor.map(function (x) { return el("li", { text: x }); }))] : []); }
+        : q.kind === "free" && q.model ? function () { return ["אין כאן תשובה אחת נכונה. הנה דוגמה אחת:", q.model]; }
+        : function () { return q.model ? [G("תשובה לדוגמה – השוו לתשובה שלכם:", "תשובה לדוגמה – השוו לתשובה שלכן:"), q.model] : ["נשמר ✔"]; };
+      var reveal = el("button", { class: "btn small", type: "button", text: !q.model ? "שמירה" : q.kind === "check" ? "שמירה והצגת התשובה" : "שמירה והצגת תשובה לדוגמה" });
       function upd() { reveal.disabled = a.done || ta.value.trim().length < 5; }
       ta.addEventListener("input", function () { a.value = ta.value; save(); upd(); });
       reveal.addEventListener("click", function () {
         a.value = ta.value.trim(); a.done = true; ta.disabled = true; upd();
-        show("neutral", q.model ? ["תשובה לדוגמה – השוו לתשובה שלכם:", q.model] : ["נשמר ✔"]);
+        show("neutral", after());
         save(); onChange();
       });
       card.appendChild(ta);
       if (q.hint) card.appendChild(el("p", { class: "meta", text: "רמז: " + q.hint, style: "margin-top:8px" }));
       card.appendChild(el("div", { class: "row" }, [reveal]));
       ta.disabled = a.done; upd();
-      if (a.done) show("neutral", q.model ? ["תשובה לדוגמה – השוו לתשובה שלכם:", q.model] : ["נשמר ✔"]);
+      if (a.done) show("neutral", after());
     }
 
     card.appendChild(fb);
