@@ -491,8 +491,8 @@
 
   function renderTeacher() {
     bar.style.width = "100%";
-    progLabel.textContent = "כל החלקים";
-    main.appendChild(el("p", { class: "t-banner", text: "כל החלקים בעמוד אחד, כולל מסך הפתיחה. התוויות הצהובות מופיעות רק כאן, לא בתצוגה ללומד/ת." }));
+    progLabel.textContent = "תצוגת סקירה";
+    main.appendChild(el("p", { class: "t-banner", text: "תצוגת סקירה: כל היחידה בעמוד אחד, כולל מסך הפתיחה. התוויות הצהובות מופיעות רק כאן, לא בתצוגה ללומד/ת." }));
     var intro = el("section", { "data-el": "intro" });
     intro.appendChild(el("div", { class: "t-label", text: "מסך הפתיחה" }));
     introParts(intro);
@@ -535,7 +535,7 @@
     var token = reviewToken();
     if (!base || !token || !window.fetch) return;
     var bm = document.querySelector('meta[name="kc-unit-build"]'), build = bm ? bm.content : null, stale = null;
-    main.firstChild.textContent = "כל החלקים בעמוד אחד, כולל מסך הפתיחה, ופתוחים להערות: כפתור \"💬 הערה\" ליד כל תווית צהובה. ההערות נאספות בשיחה ונשלחות ל-AI משם. התוויות הצהובות מופיעות רק כאן, לא בתצוגה ללומד/ת.";
+    main.firstChild.textContent = "תצוגת סקירה: כל היחידה בעמוד אחד, כולל מסך הפתיחה, וכל החלקים פתוחים להערות: כפתור \"💬 הערה\" ליד כל תווית צהובה. ההערות נאספות בשיחה ונשלחות ל-AI משם. התוויות הצהובות מופיעות רק כאן, לא בתצוגה ללומד/ת.";
     function staleNotice() {
       if (stale) return;
       stale = el("p", { class: "t-banner" }, ["יש גרסה חדשה יותר של היחידה, והמספור של החלקים אולי השתנה. ",
