@@ -287,7 +287,24 @@
     else if (q.type === "open") {
       var ta = el("textarea", { "aria-label": q.prompt, placeholder: G("כתבו כאן את התשובה שלכם", "כתבו כאן את התשובה שלכן"), dir: "auto" });
       ta.value = a.value || "";
-      var after = q.kind === "check" && q.model ? function () { return [G("בדקו אם כתבתם את אותו רעיון:", "בדקו אם כתבתן את אותו רעיון:"), q.model].concat(Array.isArray(q.checkFor) && q.checkFor.length ? [el("ul", {}, q.checkFor.map(function (x) { return el("li", { text: x }); }))] : []); }
+      function rubric() {
+        a.checks = Array.isArray(a.checks) ? a.checks : [];
+        var done = el("div", { class: "meta", text: G("כל הנקודות בתשובה שלכם ✔", "כל הנקודות בתשובה שלכן ✔") });
+        function paint() { done.style.display = a.checks.length === q.checkFor.length ? "" : "none"; }
+        var list = el("div", { class: "rubric" }, q.checkFor.map(function (x, i) {
+          var cb = el("input", { type: "checkbox" });
+          cb.checked = a.checks.indexOf(i) >= 0;
+          cb.addEventListener("change", function () {
+            a.checks = a.checks.filter(function (j) { return j !== i; }).concat(cb.checked ? [i] : []); save(); paint();
+          });
+          return el("label", { dir: "auto" }, [cb, el("span", { text: x })]);
+        }));
+        paint();
+        return el("div", { class: "selfcheck" }, [el("strong", { text: G("סמנו כל נקודה שכתבתם:", "סמנו כל נקודה שכתבתן:") }), list, done]);
+      }
+      var after = q.kind === "check" && q.model ? function () {
+          return Array.isArray(q.checkFor) && q.checkFor.length ? ["התשובה:", q.model, rubric()]
+            : [G("בדקו אם כתבתם את אותו רעיון:", "בדקו אם כתבתן את אותו רעיון:"), q.model]; }
         : q.kind === "free" && q.model ? function () { return ["אין כאן תשובה אחת נכונה. הנה דוגמה אחת:", q.model]; }
         : function () { return q.model ? [G("תשובה לדוגמה – השוו לתשובה שלכם:", "תשובה לדוגמה – השוו לתשובה שלכן:"), q.model] : ["נשמר ✔"]; };
       var reveal = el("button", { class: "btn small", type: "button", text: !q.model ? "שמירה" : q.kind === "check" ? "שמירה והצגת התשובה" : "שמירה והצגת תשובה לדוגמה" });

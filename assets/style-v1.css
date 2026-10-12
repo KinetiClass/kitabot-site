@@ -108,6 +108,11 @@ input[type="text"]:focus, textarea:focus, .opt:focus-visible, .btn:focus-visible
 .fb.bad { background: var(--bad-soft); color: var(--ink); border-inline-start: 4px solid var(--bad); }
 .fb.hint { background: var(--hint-soft); color: var(--ink); border-inline-start: 4px solid var(--hint); }
 .fb.neutral { background: var(--brand-soft); color: var(--ink); border-inline-start: 4px solid var(--brand); }
+.fb .rubric { margin: 12px 0 0; display: grid; gap: 6px; }
+.fb .rubric + .meta { margin-top: 8px; }
+.fb .rubric label { display: flex; gap: 10px; align-items: flex-start; padding: 8px 10px; background: var(--surface); border-radius: 10px; cursor: pointer; }
+.fb .rubric input { width: 20px; height: 20px; margin: 2px 0 0; flex: none; accent-color: var(--brand); }
+.fb .selfcheck > strong { display: block; margin-top: 14px; }
 
 .btn {
   font: inherit; font-weight: 700; padding: 12px 20px; min-height: 48px; border-radius: 12px;
