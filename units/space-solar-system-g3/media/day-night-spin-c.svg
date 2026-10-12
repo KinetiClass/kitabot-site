@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 270" width="360" height="270" role="img">
+<defs><linearGradient id="beam" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#ffd166" stop-opacity="0.9"/><stop offset="1" stop-color="#ffd166" stop-opacity="0.15"/></linearGradient><clipPath id="E"><circle cx="230" cy="125" r="75"/></clipPath><clipPath id="N"><rect x="230" y="40" width="100" height="170"/></clipPath></defs>
+<rect width="360" height="270" fill="#0b1030"/>
+<g fill="#ffd166" opacity="0.85"><polygon points="87.8,109.2 192.5,60.0 89.5,112.7"/><polygon points="88.6,110.7 172.5,76.8 90.1,114.2"/><polygon points="90.5,115.2 159.5,99.3 91.4,118.9"/><polygon points="91.9,123.1 155.0,125.0 91.9,126.9"/><polygon points="91.4,131.1 159.5,150.7 90.5,134.8"/><polygon points="90.1,135.8 172.5,173.2 88.6,139.3"/><polygon points="89.5,137.3 192.5,190.0 87.8,140.8"/><polygon points="33.4,107.2 20.2,91.6 37.9,101.9"/><polygon points="43.4,97.7 35.5,72.4 49.7,94.7"/><polygon points="56.5,93.2 60.0,65.0 63.5,93.2"/><polygon points="63.5,156.8 60.0,185.0 56.5,156.8"/><polygon points="49.7,155.3 35.5,177.6 43.4,152.3"/><polygon points="37.9,148.1 20.2,158.4 33.4,142.8"/><polygon points="30.2,136.6 17.5,136.4 28.4,129.8"/><polygon points="28.4,120.2 17.5,113.6 30.2,113.4"/></g><circle cx="60" cy="125" r="30" fill="#ffb703"/>
+<circle cx="230" cy="125" r="75" fill="#3a86ff"/>
+<g clip-path="url(#E)"><g>
+<animateTransform attributeName="transform" type="rotate" from="0 230 125" to="-360 230 125" dur="12s" repeatCount="indefinite"/>
+<path d="M175,95 q15,-25 40,-10 q10,18 -5,32 q-25,8 -35,-22 z" fill="#2a9d8f"/>
+<path d="M255,70 q25,-5 30,18 q-8,22 -28,12 q-12,-14 -2,-30 z" fill="#2a9d8f"/>
+<path d="M225,165 q22,-10 35,8 q0,22 -22,20 q-22,-8 -13,-28 z" fill="#2a9d8f"/>
+<path d="M290,135 q18,2 16,20 q-14,8 -20,-6 z" fill="#2a9d8f"/>
+<path d="M200,55 q10,-6 18,2 q-2,8 -12,8 z" fill="#2a9d8f"/>
+<g transform="translate(170,125) rotate(-90)">
+<path d="M-20,2 q-2,-14 20,-14 q22,0 20,14 q-8,8 -20,8 q-12,0 -20,-8 z" fill="#2a9d8f"/>
+<g transform="scale(1.2)"><polygon points="-9,0 9,0 9,-10 0,-18 -9,-10" fill="#ffffff" stroke="#0b1030" stroke-width="1.5"/><rect x="-3" y="-8" width="6" height="8" fill="#e76f51"/></g>
+</g>
+</g></g>
+<circle cx="230" cy="125" r="75" fill="#0b1030" opacity="0.62" clip-path="url(#N)"/>
+<circle cx="230" cy="125" r="75" fill="none" stroke="#90e0ef" stroke-width="2"/>
+<g><animateTransform attributeName="transform" type="rotate" from="0 230 125" to="-360 230 125" dur="12s" repeatCount="indefinite"/>
+<g transform="translate(170,125) rotate(-90) scale(1.2)"><rect x="-7" y="-9" width="5" height="5" fill="#ffd166" opacity="0"><animate attributeName="opacity" calcMode="discrete" keyTimes="0;0.25;0.75" values="0;1;0" dur="12s" repeatCount="indefinite"/></rect></g></g>
+<text x="190" y="250" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="26" fill="#ffd166">
+<animate attributeName="opacity" calcMode="discrete" keyTimes="0;0.25;0.75" values="1;0;1" dur="12s" repeatCount="indefinite"/>בבית עכשיו יום</text>
+<text x="190" y="250" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="26" fill="#90e0ef" opacity="0">
+<animate attributeName="opacity" calcMode="discrete" keyTimes="0;0.25;0.75" values="0;1;0" dur="12s" repeatCount="indefinite"/>בבית עכשיו לילה</text>
+<text x="60" y="200" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="20" fill="#ffffff">השמש</text>
+<g transform="translate(300,198) scale(0.3)"><line x1="100" y1="22" x2="100" y2="42" stroke="#cbd5e1" stroke-width="5"/><circle cx="100" cy="16" r="8" fill="#f4a261"/><rect x="68" y="102" width="64" height="58" rx="14" fill="#cbd5e1"/><rect x="50" y="112" width="14" height="36" rx="7" fill="#94a3b8"/><rect x="136" y="112" width="14" height="36" rx="7" fill="#94a3b8"/><circle cx="100" cy="72" r="34" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="5"/><rect x="76" y="58" width="48" height="30" rx="14" fill="#1e3a5f"/><circle cx="90" cy="72" r="5" fill="#90e0ef"/><circle cx="110" cy="72" r="5" fill="#90e0ef"/><path d="M92,81 q8,6 16,0" stroke="#90e0ef" stroke-width="2.5" fill="none"/></g>
+</svg>
