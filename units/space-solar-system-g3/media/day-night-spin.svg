@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" width="360" height="260" role="img">
+<rect width="360" height="260" fill="#0b1030"/>
+<circle cx="45" cy="120" r="36" fill="#ffb703"/>
+<g stroke="#ffd166" stroke-width="4"><line x1="95" y1="100" x2="135" y2="100"/><line x1="95" y1="120" x2="135" y2="120"/><line x1="95" y1="140" x2="135" y2="140"/></g>
+<defs><clipPath id="L"><rect x="140" y="30" width="90" height="180"/></clipPath><clipPath id="R"><rect x="230" y="30" width="90" height="180"/></clipPath></defs>
+<circle cx="230" cy="120" r="80" fill="#3a86ff" clip-path="url(#L)"/>
+<circle cx="230" cy="120" r="80" fill="#141b4d" clip-path="url(#R)"/>
+<circle cx="230" cy="120" r="80" fill="none" stroke="#3a86ff" stroke-width="2"/>
+<g>
+<animateTransform attributeName="transform" type="rotate" from="0 230 120" to="-360 230 120" dur="12s" repeatCount="indefinite"/>
+<g transform="translate(146,120) rotate(-90) scale(1.8)">
+<polygon points="-9,0 9,0 9,-10 0,-18 -9,-10" fill="#ffffff" stroke="#0b1030" stroke-width="2"/>
+<rect x="-3" y="-8" width="6" height="8" fill="#e76f51"/>
+</g></g>
+<text x="190" y="235" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="26" fill="#ffd166">
+<animate attributeName="opacity" calcMode="discrete" keyTimes="0;0.25;0.75" values="1;0;1" dur="12s" repeatCount="indefinite"/>אצל הבית עכשיו יום</text>
+<text x="190" y="235" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="26" fill="#90e0ef" opacity="0">
+<animate attributeName="opacity" calcMode="discrete" keyTimes="0;0.25;0.75" values="0;1;0" dur="12s" repeatCount="indefinite"/>אצל הבית עכשיו לילה</text>
+<text x="45" y="185" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="20" fill="#ffffff">השמש</text>
+</svg>
