@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 170" width="360" height="170" role="img"><rect width="360" height="170" fill="#0b1030"/>
+<circle cx="22" cy="70" r="14" fill="#ffb703"/><text x="22" y="108" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="13" fill="#fff">השמש</text>
+<rect x="40" y="55" width="28" height="30" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/><text x="54" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#0b1030">1</text>
+<rect x="70" y="55" width="28" height="30" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/><text x="84" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#0b1030">2</text>
+<rect x="100" y="55" width="28" height="30" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/><text x="114" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#0b1030">3</text>
+<rect x="130" y="55" width="28" height="30" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/><text x="144" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#0b1030">4</text>
+<rect x="160" y="55" width="28" height="30" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/><text x="174" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#0b1030">5</text>
+<rect x="190" y="55" width="28" height="30" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/><text x="204" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#0b1030">6</text>
+<rect x="220" y="55" width="28" height="30" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/><text x="234" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#0b1030">7</text>
+<rect x="250" y="55" width="28" height="30" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/><text x="264" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#0b1030">8</text>
+<rect x="280" y="55" width="28" height="30" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/><text x="294" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#0b1030">9</text>
+<rect x="310" y="55" width="28" height="30" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/><text x="324" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#0b1030">10</text>
+<circle cx="54" cy="30" r="8" fill="#3a86ff"/>
+<text x="54" y="125" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="14" fill="#fff">כדור הארץ</text>
+<circle cx="174" cy="30" r="12" fill="#d4a373"/>
+<text x="174" y="125" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="14" fill="#fff">צדק</text>
+<circle cx="324" cy="30" r="11" fill="#e9d8a6"/>
+<text x="308" y="125" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="14" fill="#fff">שבתאי</text>
+<text x="180" y="156" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="13" fill="#cbd5e1">כל משבצת היא המרחק מהשמש עד כדור הארץ</text></svg>
