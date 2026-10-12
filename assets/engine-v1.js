@@ -535,6 +535,14 @@
     var token = reviewToken();
     if (!base || !token || !window.fetch) return;
     var bm = document.querySelector('meta[name="kc-unit-build"]'), build = bm ? bm.content : null, stale = null;
+    var dirty = false;
+    function reportState() {
+      if (!FRAMED) return;
+      var d = [].some.call(main.querySelectorAll(".t-comment textarea"), function (x) { return x.value.trim(); });
+      if (d === dirty) return;
+      dirty = d;
+      try { window.parent.postMessage({ type: "kb-unit-state", dirty: d }, new URL(base).origin); } catch (e) {}
+    }
     main.firstChild.textContent = "תצוגת סקירה: כל היחידה בעמוד אחד, כולל מסך הפתיחה, וכל החלקים פתוחים להערות: כפתור \"💬 הערה\" ליד כל תווית צהובה. ההערות נאספות בשיחה ונשלחות ל-AI משם. התוויות הצהובות מופיעות רק כאן, לא בתצוגה ללומד/ת.";
     function staleNotice() {
       if (stale) return;
@@ -548,6 +556,7 @@
       if (!label || label.parentNode !== node) return;
       var id = node.getAttribute("data-el"), box = el("div", { class: "t-comment", hidden: "hidden" });
       var ta = el("textarea", { rows: "2", "aria-label": "הערה על " + label.textContent, placeholder: "מה לשנות כאן?" });
+      ta.addEventListener("input", reportState);
       var msg = el("span", { class: "t-comment-msg" });
       var send = el("button", { type: "button", class: "btn", text: "לשמור הערה" });
       send.addEventListener("click", function () {
@@ -558,7 +567,7 @@
           .then(function (r) {
             send.disabled = false;
             if (r.status === 201) {
-              ta.value = ""; msg.textContent = "נשמר ✔"; box.hidden = true; btn.textContent = "💬 ההערה נשמרה בשיחה – עוד הערה";
+              ta.value = ""; reportState(); msg.textContent = "נשמר ✔"; box.hidden = true; btn.textContent = "💬 ההערה נשמרה בשיחה – עוד הערה";
               r.json().then(function (j) { if (j && j.stale) staleNotice(); }, function () {});
             }
             else if (r.status === 401) msg.textContent = "הקישור הזה כבר לא פעיל. אפשר לכתוב את ההערה בשיחה.";
