@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420" width="360" height="420" role="img"><rect width="360" height="420" fill="#0b1030"/>
+<circle cx="95" cy="75" r="55" fill="#d4a373"/>
+<text x="95" y="152" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="20" fill="#ffffff">צדק</text>
+<circle cx="255" cy="75" r="47" fill="#e9d8a6"/>
+<ellipse cx="255" cy="75" rx="61" ry="9" fill="none" stroke="#e9d8a6" stroke-width="3"/>
+<text x="255" y="144" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="20" fill="#ffffff">שבתאי</text>
+<circle cx="95" cy="190" r="20" fill="#8ecae6"/>
+<text x="95" y="232" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="20" fill="#ffffff">אורנוס</text>
+<circle cx="255" cy="190" r="19.5" fill="#4361ee"/>
+<text x="255" y="231.5" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="20" fill="#ffffff">נפטון</text>
+<circle cx="50" cy="330" r="1.9" fill="#9ca3af"/>
+<text x="50" y="366" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="20" fill="#ffffff">חמה</text>
+<circle cx="135" cy="330" r="4.75" fill="#e9c46a"/>
+<text x="135" y="366" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="20" fill="#ffffff">נוגה</text>
+<circle cx="235" cy="330" r="5.0" fill="#3a86ff"/>
+<text x="235" y="366" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="20" fill="#ffffff">כדור הארץ</text>
+<circle cx="320" cy="330" r="2.7" fill="#e76f51"/>
+<text x="320" y="366" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="20" fill="#ffffff">מאדים</text>
+</svg>

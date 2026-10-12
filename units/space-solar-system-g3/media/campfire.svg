@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" width="360" height="200" role="img"><rect width="360" height="200" fill="#0b1030"/>
+<path d="M40,150 q-20,-40 5,-70 q4,25 18,25 q-5,-25 12,-50 q25,35 8,95 z" fill="#ff9f1c"/><path d="M52,150 q-8,-25 6,-40 q10,15 14,40 z" fill="#ffd166"/>
+<circle cx="130" cy="125" r="14" fill="#f1c9a5"/><rect x="118" y="140" width="24" height="30" rx="6" fill="#2f6f5e"/>
+<text x="130" y="190" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="17" fill="#ffffff">קרוב מאוד</text>
+<circle cx="220" cy="125" r="14" fill="#f1c9a5"/><rect x="208" y="140" width="24" height="30" rx="6" fill="#2f6f5e"/>
+<text x="220" y="190" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="17" fill="#ffffff">קצת רחוק</text>
+<circle cx="310" cy="125" r="14" fill="#f1c9a5"/><rect x="298" y="140" width="24" height="30" rx="6" fill="#2f6f5e"/>
+<text x="310" y="190" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="17" fill="#ffffff">רחוק</text>
+</svg>
