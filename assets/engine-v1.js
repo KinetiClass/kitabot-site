@@ -17,9 +17,11 @@
   var MAX_TRIES = 2;
   var RATES = ["😀 הבנתי היטב", "🙂 הבנתי חלקית", G("😕 אני צריך/ה עזרה", "😕 אני צריכה עזרה", "😕 אני צריך עזרה")];
   var TEACHER = /[?&]view=teacher(?:&|$)/.test(location.search);
-  var KEY = "lu:" + UNIT.id + ":v1" + (TEACHER ? ":teacher" : "");
+  var PREVIEW = !TEACHER && /[?&]preview=1(?:&|$)/.test(location.search);
+  var FRAMED = (function () { try { return window.top !== window.self; } catch (e) { return true; } })();
+  var KEY = "lu:" + UNIT.id + ":v1" + (TEACHER ? ":teacher" : PREVIEW ? ":preview" : "");
 
-  var state = load() || fresh();
+  var state = (!PREVIEW && load()) || fresh();
   function fresh() {
     return { name: "", startedAt: null, finishedAt: null, screen: 0, answers: {}, exit: {}, selfRating: null };
   }
@@ -110,16 +112,16 @@
     ]));
   }
 
-  function renderIntro() {
+  function introParts(box) {
     var i = UNIT.intro || {};
-    main.appendChild(el("h1", { text: UNIT.title }));
+    box.appendChild(el("h1", { text: UNIT.title }));
     var metaBits = [UNIT.subject, UNIT.grade ? "כיתה " + UNIT.grade : "", UNIT.minutes ? "כ-" + UNIT.minutes + " דקות" : ""].filter(Boolean);
-    main.appendChild(el("p", { class: "meta", text: metaBits.join(" · ") }));
-    if (i.html) main.appendChild(el("div", { class: "card", html: i.html }));
+    box.appendChild(el("p", { class: "meta", text: metaBits.join(" · ") }));
+    if (i.html) box.appendChild(el("div", { class: "card", html: i.html }));
     if (i.goals && i.goals.length) {
       var ul = el("ul", { class: "goals" });
       i.goals.forEach(function (g) { ul.appendChild(el("li", { text: g })); });
-      main.appendChild(el("div", { class: "card" }, [el("h3", { text: "בסוף השיעור תוכלו:" }), ul]));
+      box.appendChild(el("div", { class: "card" }, [el("h3", { text: "בסוף השיעור תוכלו:" }), ul]));
     }
     var steps = (i.instructions && i.instructions.length) ? i.instructions : [
       "עברו על החלקים לפי הסדר. בכל חלק יש הסבר קצר ושאלות.",
@@ -128,8 +130,10 @@
     ];
     var ol = el("ol");
     steps.forEach(function (t) { ol.appendChild(el("li", { text: t })); });
-    main.appendChild(el("div", { class: "card" }, [el("h3", { text: "איך עובדים:" }), ol]));
-
+    box.appendChild(el("div", { class: "card" }, [el("h3", { text: "איך עובדים:" }), ol]));
+  }
+  function renderIntro() {
+    introParts(main);
     var input = null;
     if (UNIT.askName !== false) {
       input = el("input", { type: "text", id: "nm", autocomplete: "off", value: state.name || "" });
@@ -487,13 +491,21 @@
 
   function renderTeacher() {
     bar.style.width = "100%";
-    progLabel.textContent = "תצוגה למורה";
-    main.appendChild(el("p", { class: "t-banner", text: "תצוגה למורה: כל היחידה בעמוד אחד. התוויות הצהובות מופיעות רק כאן, לא אצל התלמידים." }));
+    progLabel.textContent = "כל החלקים";
+    main.appendChild(el("p", { class: "t-banner", text: "כל החלקים בעמוד אחד, כולל מסך הפתיחה. התוויות הצהובות מופיעות רק כאן, לא בתצוגה ללומד/ת." }));
+    var intro = el("section", { "data-el": "intro" });
+    intro.appendChild(el("div", { class: "t-label", text: "מסך הפתיחה" }));
+    introParts(intro);
+    if (UNIT.askName !== false) intro.appendChild(el("div", { class: "card" }, [el("strong", { text: "השם שלך" }), el("p", { class: "meta", text: "השם יופיע רק במסך הסיכום ונשמר רק במכשיר הזה." }), el("input", { type: "text", disabled: "disabled", "aria-label": "השם שלך" })]));
+    main.appendChild(intro);
+    var own = UNIT.sections.map(function (sec) { var m = /^([^:]{1,20}):/.exec(sec.title || ""); return m ? m[1].trim() : ""; });
+    var useOwn = own.every(function (x, i) { return x && own.indexOf(x) === i; });
     UNIT.sections.forEach(function (sec, i) {
+      var name = useOwn ? own[i] : "חלק " + (i + 1);
       var box = el("section", { "data-el": "s" + (i + 1) });
-      box.appendChild(el("div", { class: "t-label", text: "חלק " + (i + 1) }));
+      box.appendChild(el("div", { class: "t-label", text: name }));
       box.appendChild(el("h2", { text: sec.title }));
-      renderItems(sec.items, "s" + i, box, function () {}, { he: "חלק " + (i + 1), id: "s" + (i + 1) });
+      renderItems(sec.items, "s" + i, box, function () {}, { he: name, id: "s" + (i + 1) });
       main.appendChild(box);
     });
     var ex = el("section", { "data-el": "exit" });
@@ -514,7 +526,7 @@
   function reviewToken() {
     var m = /^#r=([A-Za-z0-9_-]{20,200})$/.exec(location.hash), k = "kc-review:" + UNIT.id;
     try {
-      if (m) { sessionStorage.setItem(k, m[1]); history.replaceState(null, "", location.pathname + location.search); return m[1]; }
+      if (m) { sessionStorage.setItem(k, m[1]); if (!FRAMED) history.replaceState(null, "", location.pathname + location.search); return m[1]; }
       return sessionStorage.getItem(k);
     } catch (e) { return m ? m[1] : null; }
   }
@@ -523,7 +535,7 @@
     var token = reviewToken();
     if (!base || !token || !window.fetch) return;
     var bm = document.querySelector('meta[name="kc-unit-build"]'), build = bm ? bm.content : null, stale = null;
-    main.insertBefore(el("p", { class: "t-banner", text: "אפשר להעיר על כל חלק: כפתור \"הערה\" ליד כל תווית צהובה. ההערות נאספות בשיחה ונשלחות ל-AI משם." }), main.firstChild.nextSibling);
+    main.firstChild.textContent = "כל החלקים בעמוד אחד, כולל מסך הפתיחה, ופתוחים להערות: כפתור \"💬 הערה\" ליד כל תווית צהובה. ההערות נאספות בשיחה ונשלחות ל-AI משם. התוויות הצהובות מופיעות רק כאן, לא בתצוגה ללומד/ת.";
     function staleNotice() {
       if (stale) return;
       stale = el("p", { class: "t-banner" }, ["יש גרסה חדשה יותר של היחידה, והמספור של החלקים אולי השתנה. ",
