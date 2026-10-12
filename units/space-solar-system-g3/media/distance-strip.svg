@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 190" width="360" height="190" role="img"><rect width="360" height="190" fill="#0b1030"/>
+<circle cx="24" cy="90" r="14" fill="#ffb703"/>
+<line x1="24" y1="90" x2="345" y2="90" stroke="#64748b" stroke-width="2"/>
+<text x="24" y="130" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="14" fill="#ffffff">השמש</text>
+<line x1="106.0" y1="97" x2="106.0" y2="107" stroke="#94a3b8" stroke-width="2"/><text x="106.0" y="123" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#cbd5e1">5</text>
+<line x1="152.0" y1="97" x2="152.0" y2="107" stroke="#94a3b8" stroke-width="2"/><text x="152.0" y="123" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#cbd5e1">10</text>
+<line x1="198.0" y1="97" x2="198.0" y2="107" stroke="#94a3b8" stroke-width="2"/><text x="198.0" y="123" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#cbd5e1">15</text>
+<line x1="244.0" y1="97" x2="244.0" y2="107" stroke="#94a3b8" stroke-width="2"/><text x="244.0" y="123" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#cbd5e1">20</text>
+<line x1="290.0" y1="97" x2="290.0" y2="107" stroke="#94a3b8" stroke-width="2"/><text x="290.0" y="123" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#cbd5e1">25</text>
+<line x1="336.0" y1="97" x2="336.0" y2="107" stroke="#94a3b8" stroke-width="2"/><text x="336.0" y="123" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#cbd5e1">30</text>
+<circle cx="69.2" cy="90" r="9" fill="#3a86ff"/>
+<text x="69.2" y="55" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="15" fill="#ffffff">כדור הארץ</text>
+<circle cx="106.0" cy="90" r="16" fill="#d4a373"/>
+<text x="106.0" y="32" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="15" fill="#ffffff">צדק</text>
+<circle cx="152.0" cy="90" r="14" fill="#e9d8a6"/>
+<text x="152.0" y="55" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="15" fill="#ffffff">שבתאי</text>
+<circle cx="234.79999999999998" cy="90" r="10" fill="#8ecae6"/>
+<text x="234.79999999999998" y="32" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="15" fill="#ffffff">אורנוס</text>
+<circle cx="336.0" cy="90" r="10" fill="#4361ee"/>
+<text x="336.0" y="55" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="15" fill="#ffffff">נפטון</text>
+<text x="190" y="165" text-anchor="middle" direction="rtl" font-family="Arial,sans-serif" font-size="14" fill="#cbd5e1">המספרים מראים כמה דפים מהשמש</text></svg>
