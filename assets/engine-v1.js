@@ -615,6 +615,28 @@
     navInner.appendChild(back);
   }
 
+  function goTo(id) {
+    if (!/^(intro|exit(\.q\d{1,2})?|e(\.[a-z]\d{1,2})?|s\d{1,2}(\.[a-z]\d{1,2})?)$/.test(id)) return;
+    if (TEACHER) {
+      var node = main.querySelector('[data-el="' + id + '"]');
+      if (!node) return;
+      node.scrollIntoView({ block: "center" });
+      node.classList.add("t-goto");
+      setTimeout(function () { node.classList.remove("t-goto"); }, 4000);
+      return;
+    }
+    var sm = /^s(\d+)/.exec(id), s = id === "intro" ? 0 : /^exit/.test(id) ? S_EXIT : /^e/.test(id) && hasEnrich ? S_ENRICH : sm ? +sm[1] : -1;
+    if (s < 0 || (s > N && s !== S_EXIT && s !== S_ENRICH)) return;
+    if (s > 0 && !state.startedAt) state.startedAt = Date.now();
+    go(s);
+  }
+  if (FRAMED) window.addEventListener("message", function (e) {
+    var meta = document.querySelector('meta[name="kc-studio"]');
+    if (!meta || e.source !== window.parent || !e.data || e.data.type !== "kb-goto") return;
+    try { if (e.origin !== new URL(meta.content).origin) return; } catch (x) { return; }
+    goTo(String(e.data.el || ""));
+  });
+
   if (state.screen > S_ENRICH || (state.screen === S_ENRICH && !hasEnrich)) state.screen = 0;
   if (state.screen > 0 && !state.startedAt) state.screen = 0;
   render();

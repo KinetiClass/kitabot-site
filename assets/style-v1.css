@@ -149,6 +149,7 @@ nav.bottom .inner { max-width: 720px; margin: 0 auto; display: flex; justify-con
   body { background: #fff; }
 }
 
+.t-goto { outline: 3px solid #e0b100; outline-offset: 4px; background: #fdf3c7; border-radius: 8px; transition: background .4s; }
 .t-label { display: inline-block; font-size: 12px; font-weight: 700; background: #fde68a; color: #1f2937; border-radius: 6px; padding: 1px 8px; margin-bottom: 6px; }
 .t-banner { background: #fef3c7; color: #1f2937; border-radius: 8px; padding: 8px 12px; font-size: 14px; }
 .t-comment-btn { margin-inline-start: 8px; font-size: 13px; padding: 1px 10px; min-height: 28px; border-radius: 999px; border: 1px solid #d97706; background: #fff; color: #92400e; cursor: pointer; }
